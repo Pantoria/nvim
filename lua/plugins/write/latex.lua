@@ -1,4 +1,8 @@
 return {
+  {
+    "neoclide/coc.nvim",
+    branch = "release",
+  },
   -- {
   --   "ryleelyman/latex.nvim",
   --   dependencies = "nvim-treesitter/nvim-treesitter",

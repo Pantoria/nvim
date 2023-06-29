@@ -21,7 +21,7 @@ return {
           ["<C-p>"] = cmp.mapping.scroll_docs(4),
           ["<C-Space>"] = cmp.mapping.complete(),
           ["<C-e>"] = cmp.mapping.abort(),
-          ["<C-f>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+          --["<C-f>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
           ["<S-f>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
           ["<C-l>"] = cmp.mapping({
             i = function(fallback)
@@ -34,11 +34,11 @@ return {
           }),
         }),
         sources = cmp.config.sources({
-          { name = "nvim_lsp" },
-          { name = "luasnip" },
-          { name = "buffer" },
-          { name = "path" },
-          { name = "copilot" },
+          --{ name = "nvim_lsp" },
+          --{ name = "luasnip" },
+          --{ name = "buffer", keyword_length = 3 },
+          --{ name = "path" },
+          --{ name = "copilot" },
         }),
         formatting = {
           format = function(_, item)

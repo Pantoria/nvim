@@ -43,12 +43,12 @@ map("n", "<leader>gs", function()
   require("luasnip.loaders").edit_snippet_files({})
 end, { desc = "Go to luasnip config" })
 map("n", "<leader>gp", function()
-  require("neo-tree.command").execute({ toggle = true, dir = "/Users/hanyu_yan/.config/nvim/lua/plugins" })
+  require("neo-tree.command").execute({ toggle = true, dir = "~/.config/nvim/lua/plugins" })
 end, { desc = "Go to plugins config" })
 map("n", "<leader>gl", function()
   require("neo-tree.command").execute({
     toggle = true,
-    dir = "/Users/hanyu_yan/.local/share/nvim/lazy/LazyVim/lua/lazyvim/",
+    dir = "~/.local/share/nvim/lazy/LazyVim/lua/lazyvim/",
   })
 end, { desc = "Go to lazyvim config" })
 
@@ -80,9 +80,9 @@ map({ "o", "x" }, "im", "<Plug>(vimtex-i$)", { desc = "Use `im` for the inline m
 map({ "o", "x" }, "ai", "<Plug>(vimtex-am)", { desc = "Use `ai` for the item text text object" })
 map({ "o", "x" }, "ii", "<Plug>(vimtex-im)", { desc = "Use `ii` for the item text text object" })
 
-map({ "i", "n", "v" }, "<C-b>", function()
-  require("knap").toggle_autopreviewing()
-end)
+map({ "i", "n", "v" }, "<C-b>", "<Left>")
+map({ "i", "n", "v" }, "<C-f>", "<Right>")
+
 map({ "i", "n", "v" }, "<C-x>", function()
   require("knap").forward_jump()
 end)
